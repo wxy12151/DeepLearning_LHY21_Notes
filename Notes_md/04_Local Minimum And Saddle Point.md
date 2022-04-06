@@ -57,7 +57,9 @@
 
 - 第二项是$(θ-θ')^Tg$
 
-    <img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210314155508574.png" alt="image-20210314155508574" style="zoom:50%;" /> 
+    <img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210314155508574.png" alt="image-20210314155508574" style="zoom:50%;" />
+
+     
 
     **$g$是一个向量,这个g就是我们的gradient**,我们用绿色的这个g来代表gradient,这个**gradient会来弥补,$θ'$跟$θ$之间的差距**,我们虽然刚才说$θ'$跟$θ$,它们应该很接近,但是中间还是有一些差距的,那这个差距,第一项我们用这个gradient,来表示他们之间的差距,有时候gradient会写成$∇L(θ')$,这个地方的$g$是一个向量,**它的第i个component,就是θ的第i个component对L的微分**,光是看g还是没有办法,完整的描述L(θ),你还要看第三项
 
@@ -107,9 +109,9 @@
 
 ​	所以如果你今天算出一个hessian,你不需要把它跟所有的v都乘看看,你只要去直接看这个H的eigen value,如果你发现
 
-- **所有eigen value都是正的**,那就代表说这个条件成立,就$v^THv$,会大於零,也就代表说是一个local minima。所以你从hessian metric可以看出,它是不是local minima,你只要算出hessian metric算完以后,看它的eigen value发现都是正的,它就是local minima。
-- 那反过来说也是一样,如果今天在这个状况,对所有的v而言,$v^THv$小於零,那H是negative definite,那就代表所有**eigen value都是负的**,就保证他是local maxima
-- **那如果eigen value有正有负**,那就代表是saddle point,
+- **所有eigen value都是正的**,那就代表说这个条件成立,就$v^THv$,会大於零,也就代表说是一个local minima。所以你从hessian metric可以看出,它是不是local minima,你只要算出hessian metric算完以后,看它的eigen value发现都是正的,它就是==local minima==。
+- 那反过来说也是一样,如果今天在这个状况,对所有的v而言,$v^THv$小於零,那H是negative definite,那就代表所有**eigen value都是负的**,就保证他是==local maxima==
+- **那如果eigen value有正有负**,那就代表是==saddle point==,
 
 ​	那假设在这裡你没有听得很懂的话,你就可以记得结论,**你只要算出一个东西,这个东西的名字叫做hessian,它是一个矩阵,这个矩阵如果它所有的eigen value,都是正的,那就代表我们现在在local minima,如果它有正有负,就代表在saddle point。**
 
@@ -212,7 +214,7 @@ $$
 
 ​	也就是说假设$θ-θ'=\mu$,也就是,**你在θ'的位置加上u,沿著u的方向做update得到θ,你就可以让loss变小**
 
-​	因為根据这个式子,你只要θ减θ'等於u,loss就会变小,所以你今天只要让θ等於θ'加u,你就可以让loss变小,你只要沿著u,也就是eigen vector的方向,去更新你的参数 去改变你的参数,你就可以让loss变小了
+​	因為根据这个式子,你只要θ减θ'等於u,loss就会变小,所以你今天只要让θ等於θ'加u,你就可以让loss变小,你只要==沿著u,也就是eigen vector的方向,去更新你的参数 去改变你的参数,你就可以让loss变小了==
 
 ​	所以虽然在critical point没有gradient,如果我们今天是在一个**saddle point**,你也不一定要惊慌,你只要**找出负的eigen value,再找出它对应的eigen vector,用这个eigen vector去加θ',就可以找到一个新的点,这个点的loss比原来还要低**
 
@@ -263,5 +265,5 @@ $$
 
 ​	所以今天虽然在这个图上,越往右代表我们的critical point越像local minima,**但是它们都没有真的,变成local minima**,就算是在最极端的状况,我们仍然有一半的case,我们的eigen value是负的,这一半的case eigen value是正的,代表说在所有的维度裡面有一半的路,这一半的路 如果要让loss上升,还有一半的路可以让loss下降。
 
-​	所以从经验上看起来,其实local minima并没有那麼常见,多数的时候,你觉得你train到一个地方,你gradient真的很小,然后所以你的参数不再update了,往往是因為你卡在了一个saddle point。
+​	所以从经验上看起来,其实==local minima并没有那麼常见==,多数的时候,你觉得你train到一个地方,你gradient真的很小,然后所以你的参数不再update了,往往是因為你卡在了一个saddle point。
 

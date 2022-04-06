@@ -334,7 +334,7 @@ $$
 
 ​	接下来就真的做了这个实验,这个都是真实的数据.
 
-​	<img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210305222316873.png" alt="image-20210305222316873" style="zoom:50%;" />
+​	<img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210305222316873.png" alt="image-20210305222316873" style="zoom:50%;" />	
 
 - 如果是 Linear 的 Model,我们现在考虑 56 天,训练资料上面的 Loss 是 0.32k,没看过的资料 2021 年资料是 0.46k
 - 如果用 10 个 ReLU,好像没有进步太多,这边跟用 Linear 是差不多的,所以看起来 10 个 ReLU 不太够
@@ -424,3 +424,4 @@ $$
 ​	<img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210305225246824.png" alt="image-20210305225246824" style="zoom:67%;" />
 
 ​	好 那今天其实就讲了深度学习,那今天讲的不是一般的介绍方式,如果你想要听一般的介绍方式,过去的课程影片也是有的,我就把连结附在这边,然后深度学习的训练,会用到一个东西叫 Backpropagation,其实它就是比较有效率,算 Gradients 的方法,跟我们今天讲的东西没有什麼不同,但如果你真的很想知道,Backpropagation 是什麼的话,影片连结也附在这边.
+
