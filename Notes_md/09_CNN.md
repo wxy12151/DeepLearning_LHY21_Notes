@@ -464,7 +464,9 @@ $(1\times1)+(-1\times0)+(-1\times0)+(-1\times0)+(1\times1)+(-1\times0)+(-1\times
 為什麼用 CNN 是基於两个观察
 
 - 第一个观察是 我们不需要看整张图片,那对 Neuron 的故事版本,对於第一个故事而言就是,Neuron 只看图片的一小部分,对 Filter 的故事而言就是,我们有一组 Filter,每个 Filter 只看一个小范围,它只侦测小的 Pattern
+- Notes. 1. 不需要看整张图片：在故事一中，每个Neuron对应一个固定区域；在故事二中，Filter大小有限制，这便代表了每次只看图片一部分
 - 然后我们说 同样的 Pattern,可能出现在图片的不同的地方,所以 Neuron 间可以共用参数,对 Filter 的故事而言就是,一个 Filter 要扫过整张图片,这个就是 Convolutional Layer
+- Notes. 2. 同样的特征会出现在不同地方：在故事一中，不同Neuron间共享参数；在故事二中，单个Filter卷积整张图片的过程即寻找单个特征在图片中的位置。
 
 
 

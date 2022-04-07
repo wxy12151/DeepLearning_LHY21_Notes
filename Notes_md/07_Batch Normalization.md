@@ -84,7 +84,7 @@ $$
 
 ## Considering Deep Learning
 
-$\tilde{x}$ 代表 normalize 的 feature,把它丢到 deep network 裡面,去做接下来的计算和训练,所以把 $x_1$ tilde 通过第一个 layer 得到 $z^1$,那你有可能通过 activation function,不管是选 Sigmoid 或者 ReLU 都可以,然后再得到 $a^1$,然后再通过下一层等等,那就看你有几层 network 你就做多少的运算
+$\tilde{x}$ 代表 normalize 的 feature,把它丢到 deep network 裡面,去做接下来的计算和训练,所以把 $\tilde{x_1}$ 通过第一个 layer 得到 $z^1$,那你有可能通过 activation function,不管是选 Sigmoid 或者 ReLU 都可以,然后再得到 $a^1$,然后再通过下一层等等,那就看你有几层 network 你就做多少的运算
 
 <img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210426210627226.png" alt="image-20210426210627226" style="zoom:50%;" />
 
