@@ -12,7 +12,7 @@ GPT要做的任务是,**预测接下来,会出现的token是什麼**
 
 举例来说,假设你的训练资料裡面,有一个句子是台湾大学,那GPT拿到这一笔训练资料的时候,它做的事情是这样
 
-你给它BOS这个token,然后GPT output一个embedding,然后接下来,你用这个embedding去预测下一个,应该出现的token是什麼
+你给它Basic Operating System?(BOS)这个token,然后GPT output一个embedding,然后接下来,你用这个embedding去预测下一个,应该出现的token是什麼
 
 <img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210606121532206.png" alt="image-20210606121532206" style="zoom:50%;" />
 

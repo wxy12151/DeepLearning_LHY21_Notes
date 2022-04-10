@@ -60,7 +60,7 @@ BERT的这些向量是输出向量，每个向量代表该词的含义。BERT在
 
 当我们训练BERT时，我们给它w1、w2、w3和w4，我们覆盖w2，并告诉它预测w2，而它就是从上下文中提取信息来预测w2。所以这个向量是其上下文信息的精华，可以用来预测w2是什么。
 
-这样的想法在BERT之前已经存在了。在word embedding中，有一种技术叫做CBOW。
+这样的想法在BERT之前已经存在了。在word embedding中，有一种技术叫做The Continuous Bag of Words (CBOW)。
 
 <img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210602213758001.png" alt="image-20210602213758001" style="zoom:50%;" />
 
@@ -128,7 +128,7 @@ CBOW是一个非常简单的模型，它使用两个变换，是一个**非常�
 
 ### Zero-shot Reading Comprehension
 
-google训练了一个Multi-lingual BERT，它能够做这104种语言的填空题。神奇的地方来了，如果你用**英文**问答**数据**训练它，它就会自动学习如何做**中文问答**
+google训练了一个Multi-lingual BERT，它能够做这104种语言的填空题。神奇的地方来了，==如果你用**英文**问答**数据**训练它，它就会自动学习如何做**中文问答**==
 
 <img src="https://gitee.com/unclestrong/deep-learning21_note/raw/master/imgbed/image-20210602220224565.png" alt="image-20210602220224565" style="zoom:50%;" />
 
